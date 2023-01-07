@@ -1,0 +1,21 @@
+.SearchBuilder {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.SearchBuilder select,
+.SearchBuilder button {
+  background-color: white;
+  padding: 6px;
+  border: 1px solid gray;
+  margin: 2px;
+  border-radius: 5px;
+  font-size: 12px;
+}

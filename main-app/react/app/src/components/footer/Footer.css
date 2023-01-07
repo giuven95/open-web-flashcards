@@ -1,0 +1,55 @@
+.Footer {
+    height: 38.5%;
+    width: 100%;
+    background-color: #0a0d47;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    max-width: calc(100vw - 30px);
+}
+
+.FooterTop, .FooterBottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    width: 100%; 
+}
+
+.Footer svg {
+    width: 18.5px;
+    margin: 2.5px;
+    margin-top: 6.5px;
+}
+
+.Footer img {
+    width: 32px;
+    height: auto;
+    margin-left: 8px;
+    border-radius: 40%;
+}
+
+.Footer img, .Footer span {
+    margin-right: 12px;
+}
+
+.Footer span {
+    font-size: 14px;
+}
+
+.Footer .FooterThanks {
+    font-size: 11px;
+    margin-left: 11px;
+}
+
+.FooterThanks a {
+    color: white;
+    text-decoration: underline;
+}
+
+.FooterBottom {
+    padding-top: 20px;
+}

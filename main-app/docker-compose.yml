@@ -1,0 +1,67 @@
+version: "3.5"
+
+services:
+  react:
+    build: ./react
+    container_name: open-web-flashcards-react
+    image: open-web-flashcards-react
+    ports:
+      - "9690:3000"
+    depends_on:
+      - orchestrator-flask
+  orchestrator-flask:
+    build: ./orchestrator-flask
+    container_name: open-web-flashcards-orchestrator-flask
+    image: open-web-flashcards-orchestrator-flask
+    ports:
+      - "9691:80"
+    networks:
+      - open-web-flashcards-memcached-net
+      - open-web-flashcards-deck-net
+      - open-web-flashcards-mailer-net
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - deck-flask
+      - mailer-flask
+  deck-flask:
+    build: ./deck-flask
+    container_name: open-web-flashcards-deck-flask
+    image: open-web-flashcards-deck-flask
+    networks:
+      - open-web-flashcards-deck-net
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_NAME=decks
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+  mailer-flask:
+    build: ./mailer-flask
+    container_name: open-web-flashcards-mailer-flask
+    image: open-web-flashcards-mailer-flask
+    networks:
+      - open-web-flashcards-mailer-net
+    environment:
+      - PYTHONUNBUFFERED=1
+      - WEBSITE_SENDER_EMAIL_ADDRESS=${WEBSITE_SENDER_EMAIL_ADDRESS}
+      - ADMIN_RECIPIENT_EMAIL_ADDRESS=${ADMIN_RECIPIENT_EMAIL_ADDRESS}
+      - WEBSITE_SENDGRID_API_KEY=${WEBSITE_SENDGRID_API_KEY}
+  memcached:
+    image: memcached:latest
+    container_name: open-web-flashcards-memcached
+    networks:
+      - open-web-flashcards-memcached-net
+    command:
+      - "-I 32M"
+      - "-m 4096M"
+networks:
+  open-web-flashcards-memcached-net:
+    driver: bridge
+  open-web-flashcards-deck-net:
+    driver: bridge
+    name: open-web-flashcards-deck-net
+  open-web-flashcards-mailer-net:
+    driver: bridge
+    name: open-web-flashcards-mailer-net

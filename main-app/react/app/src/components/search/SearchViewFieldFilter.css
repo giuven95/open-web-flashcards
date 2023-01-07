@@ -1,0 +1,20 @@
+.SearchViewFieldFilter .MuiTypography-root {
+  font-size: 12px;
+}
+
+.SearchViewFieldFilter {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.SearchViewFieldFilter .MuiFormControlLabel-root {
+  color: black;
+  background-color: white;
+  margin: 5px;
+  min-width: 250px;
+  border-radius: 5px;
+}

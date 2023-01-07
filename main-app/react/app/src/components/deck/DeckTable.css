@@ -1,0 +1,15 @@
+.DeckTable {
+  overflow-x: scroll;
+  background-color: #eeebe0;
+}
+
+.DeckTable .MuiTableBody-root .MuiTableCell-root {
+  font-size: 12px;
+}
+
+.DeckTable .MuiTableHead-root,
+.DeckTable .MuiTableHead-root * {
+  font-weight: bold;
+  color: white;
+  background-color: black;
+}

@@ -1,0 +1,22 @@
+.SearchButton.MuiButton-root {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.SearchButton .MuiButton-contained {
+  background-color: #00b0ff;
+  color: white;
+}
+
+.SearchButton .MuiButton-contained:hover {
+  background-color: #0091ea;
+}
+
+.SearchButton .MuiButton-contained:active {
+  background-color: #0091ea;
+}
+
+.SearchButton .MuiButton-contained:disabled {
+  background-color: #b3e5fc;
+  color: #212121;
+}
