@@ -1,0 +1,35 @@
+.FooterLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.FooterLinks a {
+    color: white;
+    text-decoration: underline;
+}
+  
+.FooterLinks a:hover {
+    color: wheat;
+}
+  
+.FooterLinks li {
+    margin: 0 8px;
+}
+
+.FooterLinks :not(h3) {
+    padding: 0px;
+    color: white;
+    text-decoration: underline;
+}
+
+.FooterLinks span {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.FooterLinks h3 {
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+}

@@ -1,0 +1,17 @@
+version: "3.5"
+
+services:
+  pgadmin:
+    container_name: open-web-flashcards-pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    networks:
+      - open-web-flashcards-pgadmin-net
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "7050:80"
+networks:
+  open-web-flashcards-pgadmin-net:
+    driver: bridge

@@ -1,0 +1,105 @@
+.Deck {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.DeckTop {
+  background-color: white;
+  border-bottom: 1px grey solid;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.DeckToggle {
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.DeckName {
+  font-size: 17.5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.DeckAuthor {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.DeckScore {
+  font-size: 16px;
+  color: #f60;
+  margin-bottom: 10px;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DeckNumRatings {
+  font-size: 14px;
+  color: rgb(69, 65, 65);
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.DeckNumDownloads {
+  font-size: 14px;
+  color: rgb(69, 65, 65);
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.DeckMainTag {
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(42, 38, 47);
+  margin-bottom: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.DeckOtherTags {
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(69, 65, 65);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.DeckExtra {
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.DeckMiddle {
+  padding-left: 10px;
+  padding-right: 10px;
+}

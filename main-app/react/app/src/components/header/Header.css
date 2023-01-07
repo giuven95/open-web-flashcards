@@ -1,0 +1,43 @@
+.Header {
+  background-color: #0a0d47;
+  color: white;
+  position: relative;
+  z-index: 1400;
+  height: 4%;
+  background-color: #00004d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.Header h1 {
+  font-variant: small-caps;
+  font-size: 20px;
+}
+
+.Header svg {
+  width: 17px;
+  margin: 6.5px;
+  margin-top: 12.5px;
+}
+
+@media only screen and (max-width: 400px) {
+  .Header h1 {
+    font-size: 16px;
+  }
+}
+
+.HeaderFront * {
+  max-height: 140px;
+}
+
+.HeaderFront {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-height: 140px;
+}

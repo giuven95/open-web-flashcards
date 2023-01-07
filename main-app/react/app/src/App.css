@@ -1,0 +1,43 @@
+.AppPage,
+.AppItem {
+  background-color: rgb(232, 230, 239);
+}
+
+.AppPage {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+@media only screen and (max-width: 750px) {
+  .AppPage {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+.App input {
+  min-height: 25px;
+}
+
+.App textarea {
+  min-height: 100px;
+}
+
+.App label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.AppPage > .AppForm > * {
+  margin-top: 20px;
+}
+
+.AppPage > h2 {
+  margin-bottom: 20px;
+}
+
+#menu-appbar.MuiPopover-root {
+  z-index: 2500;
+}

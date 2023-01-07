@@ -1,0 +1,2 @@
+const DEFAULT_DECK_PAGE_SIZE = 50;
+export default DEFAULT_DECK_PAGE_SIZE;

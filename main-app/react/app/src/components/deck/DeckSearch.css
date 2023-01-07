@@ -1,0 +1,28 @@
+.DeckSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DeckSearch .MuiTabs-flexContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.DeckSearch .MuiTabs-indicator {
+  background-color: #00b0ff;
+}
+
+.DeckSearch .MuiTab-root {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #212121;
+  min-width: 100px;
+  margin: 0 20px;
+}
+
+.DeckSearch .MuiTab-root.Mui-selected {
+  color: #00b0ff;
+}

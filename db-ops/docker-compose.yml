@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  string_repairer:
+    container_name: open-web-flashcards-repair-strings
+    build: ./repair-strings
+    image: open-web-flashcards-repair-strings
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATABASE_NAME=decks
+      - DATABASE_HOST=172.25.0.1
+      - DATABASE_PORT=7051
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+    

@@ -1,0 +1,19 @@
+.DeckList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f7f4f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.DeckList .Deck {
+    margin: 20px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .DeckList .Deck {
+        min-width: calc(100% - 80px);
+    }
+}
