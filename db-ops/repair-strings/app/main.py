@@ -1,5 +1,6 @@
 import psycopg2
 import os
+import time
 
 
 def db_make_connection():
@@ -80,7 +81,7 @@ def db_repair_string_field_values(conn, old_chars, new_chars, table_to_string_fi
     cur.close()
 
 
-def main():
+def main_inner():
     old_chars, new_chars = string_build_char_lists()
     conn = db_make_connection()
     table_names = db_get_table_names(conn)
@@ -91,6 +92,12 @@ def main():
     print(table_to_string_fields)
     db_repair_string_field_values(
         conn, old_chars, new_chars, table_to_string_fields)
+
+
+def main():
+    while True:
+        main_inner()
+        time.sleep(3600)  # wait 1 hour
 
 
 if __name__ == "__main__":
