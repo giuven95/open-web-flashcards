@@ -1,6 +1,24 @@
 version: "3.5"
 
 services:
+  db_backup_local:
+    container_name: open-web-flashcards-backup-local
+    image: prodrigestivill/postgres-backup-local
+    volumes:
+        - ./postgres-backups:/backups
+    environment:
+        - POSTGRES_HOST=${DATABASE_HOST}
+        - POSTGRES_DB=decks
+        - POSTGRES_USER=${DATABASE_USER}
+        - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+        - POSTGRES_PORT=${DATABASE_PORT}
+        - POSTGRES_EXTRA_OPTS=-Z6 --schema=public --blobs
+        - SCHEDULE=@hourly
+        - BACKUP_KEEP_DAYS=2
+        - BACKUP_KEEP_WEEKS=2
+        - BACKUP_KEEP_MONTHS=2
+        - BACKUP_KEEP_MINUTES=2
+        - HEALTHCHECK_PORT=8080
   string_repairer:
     container_name: open-web-flashcards-repair-strings
     build: ./repair-strings
@@ -8,8 +26,7 @@ services:
     environment:
       - PYTHONUNBUFFERED=1
       - DATABASE_NAME=decks
-      - DATABASE_HOST=172.25.0.1
-      - DATABASE_PORT=7051
+      - DATABASE_HOST=${DATABASE_HOST}
+      - DATABASE_PORT=${DATABASE_PORT}
       - DATABASE_USER=${DATABASE_USER}
       - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-    
